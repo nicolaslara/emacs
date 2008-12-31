@@ -12,5 +12,6 @@
 (load-library "colors") ;;depends on variables
 (load-library "functions")
 (load-library "modes")
+(load-library "tools")
 (load-library "keys")
 
