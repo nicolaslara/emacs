@@ -8,3 +8,12 @@
 (global-set-key (kbd "M-<down>") 'move-line-down)
 (global-set-key (kbd "C-x p") 'goto-matching-paren)
 (global-set-key (kbd "M-C-f") 'find-file-at-point)
+
+;; disable insert key
+(global-set-key [insert] (lambda () (interactive)))
+(global-set-key [insertchar] (lambda () (interactive)))
+
+;; Make the <backspace> key scroll backwards in Info mode
+(define-key isearch-mode-map [backspace] 'isearch-delete-char)
+
+

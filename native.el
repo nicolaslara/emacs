@@ -33,3 +33,9 @@
 
 ;; Shell colors
 (ansi-color-for-comint-mode-on)
+
+;; Activate dired and tramp
+(require 'dired)
+(require 'dired-x)
+(require 'wdired)
+(require 'tramp)

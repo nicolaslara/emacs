@@ -1,8 +1,12 @@
+;; set terminal variable
 (if (eq window-system nil)
-    ;;is it running from the terminal?
+    "is it running from the terminal?"
     (setq terminal t)
   (setq terminal nil)
   )
+
+;; set elisp-root variable
+(setq elisp-root "/home/test/elisp")
 
 ;; No tabs, spaces
 (setq-default tab-width 4)
