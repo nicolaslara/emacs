@@ -5,7 +5,7 @@
 ;;
 
 
-(add-to-list 'load-path "/home/test/elisp" t)
+(add-to-list 'load-path "~/elisp" t)
 
 (load-library "variables")
 (load-library "native")

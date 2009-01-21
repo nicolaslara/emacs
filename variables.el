@@ -6,7 +6,7 @@
   )
 
 ;; set elisp-root variable
-(setq elisp-root "/home/test/elisp")
+(setq elisp-root "~/elisp")
 
 ;; No tabs, spaces
 (setq-default tab-width 4)
