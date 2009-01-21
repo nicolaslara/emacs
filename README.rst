@@ -14,7 +14,7 @@ directory::
 Make a link in your home directory pointing to the ".emacs" file
 inside ~/elisp::
        
-        ln -s ~/elisp/.emacs ~/emacs
+        ln -s ~/elisp/.emacs ~/.emacs
 
 Note
 ----
