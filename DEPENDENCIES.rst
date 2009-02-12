@@ -9,3 +9,8 @@ For jdee
 For Ropemacs
 ============
  * Rope
+
+for Auctex
+==========
+ * Latex installation
+ * Ghostview

@@ -1,9 +1,9 @@
 ;; set terminal variable
-(if (eq window-system nil)
-    "is it running from the terminal?"
-    (setq terminal t)
-  (setq terminal nil)
-  )
+(cond ((eq window-system nil)
+       "is it running from the terminal?"
+       (setq terminal t))
+      (t (setq terminal nil))
+      )
 
 ;; set elisp-root variable
 (setq elisp-root "~/elisp")
