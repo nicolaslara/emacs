@@ -14,3 +14,7 @@ For Auctex
 ==========
  * Latex installation
  * Ghostview
+
+For WordToEmacs
+===============
+ * antiword

@@ -35,3 +35,8 @@
 ;; load auctex/preview-latex
 (load (concat elisp-root "/tools/auctex/site-lisp/auctex.el") nil t t)
 (load (concat elisp-root "/tools/auctex/site-lisp/preview-latex.el") nil t t)
+
+;; Word to Emacs 
+;; (requieres antiword)
+(autoload 'word-to-emacs (concat elisp-root "/tools/word-to-emacs"))
+(add-to-list 'auto-mode-alist '("\\.doc\\'" . word-to-emacs))

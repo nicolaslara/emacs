@@ -34,6 +34,9 @@
 ;; Shell colors
 (ansi-color-for-comint-mode-on)
 
+;; mouse avoidance
+(mouse-avoidance-mode "animate")
+
 ;; Activate dired and tramp
 (require 'dired)
 (require 'dired-x)

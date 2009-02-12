@@ -19,3 +19,9 @@ inside ~/elisp::
 Note
 ----
 This is an incomplete project.
+
+Disclaimer
+==========
+
+Some of the tools are compiled for my specific installation and will
+not work unless a similar setup is used.
