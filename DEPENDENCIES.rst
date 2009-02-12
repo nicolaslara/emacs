@@ -10,7 +10,7 @@ For Ropemacs
 ============
  * Rope
 
-for Auctex
+For Auctex
 ==========
  * Latex installation
  * Ghostview
