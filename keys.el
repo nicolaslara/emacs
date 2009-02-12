@@ -17,4 +17,6 @@
 ;; Make the <backspace> key scroll backwards in Info mode
 (define-key isearch-mode-map [backspace] 'isearch-delete-char)
 
-
+;; Better middle mouse button interaction
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)

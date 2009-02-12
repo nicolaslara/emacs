@@ -23,3 +23,7 @@
    kept-new-versions 6
    kept-old-versions 2
    version-control t)       ; use versioned backups
+
+;; No tabs, spaces
+(setq-default tab-width 4)
+(setq-default indent-tabs-mode nil)

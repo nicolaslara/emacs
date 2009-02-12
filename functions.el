@@ -66,3 +66,38 @@
       (message "Region has %d words" n)
       n)))
 
+;;
+;; goto-longest-line
+;; --------------------
+;; Sometimes for code is nice to find lines that are pushed out too far.
+;; This function moves point to the end of the longest line.
+;;
+(defun goto-longest-line ()
+  "Finds the longest line and puts the point there."
+  (interactive)
+  (let ((width 0)
+        (pos 0))
+    (goto-char (point-min))
+    (while (= (forward-line 1) 0)
+      (end-of-line)
+      (let ((curwid (current-column)))
+        (unless (<= curwid width)
+          (setq width curwid)
+          (setq pos (point)))))
+    (goto-char pos)))
+
+;;
+;; kill-other-buffers
+;; ------------------
+;; I find that Emacs buffers multiply faster than rabbits.  They were
+;; regenerating faster than I could kill them so I wrote this.  (Original
+;; version was my first code in ELisp!)  Run this macro to kill all but the
+;; active buffer and the unsplit the window if need be.
+;;
+(defun kill-other-buffers ()
+  "Kill all buffers except the current and unsplit the window."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list)))   ; Delete other buffers
+  (delete-other-windows)                                      ; And then unsplit the current window...
+  (delete-other-frames))                                      ; ...and remove other frames, too.
+

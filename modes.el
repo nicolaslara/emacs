@@ -42,3 +42,10 @@
 
 (add-to-list 'auto-mode-alist '("\\.x\\'" . haskell-mode))
 (add-to-list 'auto-mode-alist '("\\.y\\'" . haskell-mode))
+
+;; What files to invoke the new html-mode for?
+(add-to-list 'auto-mode-alist '("\\.inc\\'" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.php[34]?\\'" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.[sj]?html?\\'" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.jsp\\'" . html-mode))
