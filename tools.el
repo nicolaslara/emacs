@@ -31,3 +31,7 @@
 (defun my-jde-mode-hook ()
   (setq c-basic-offset 4))
 (add-hook 'jde-mode-hook 'my-jde-mode-hook)
+
+;; load auctex/preview-latex
+(load (concat elisp-root "/tools/auctex/site-lisp/auctex.el") nil t t)
+(load (concat elisp-root "/tools/auctex/site-lisp/preview-latex.el") nil t t)
