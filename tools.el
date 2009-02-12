@@ -9,6 +9,11 @@
 (load-file (concat elisp-root "/tools/cedet/common/cedet.el"))
 (semantic-load-enable-excessive-code-helpers)
 
+;; load Emacs Code Browser
+(add-to-list 'load-path (concat elisp-root "/tools/ecb/"))
+(load-file (concat elisp-root "/tools/ecb/ecb.el"))
+(require 'ecb-autoloads)
+
 ;; load JDEE
 (add-to-list 'load-path 
              (expand-file-name 
