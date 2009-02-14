@@ -40,3 +40,24 @@
 ;; (requieres antiword)
 (autoload 'word-to-emacs (concat elisp-root "/tools/word-to-emacs"))
 (add-to-list 'auto-mode-alist '("\\.doc\\'" . word-to-emacs))
+
+;; In-place annotations
+(require 'ipa)
+;; Redefined to make annotations above the line 
+(defun ipa-set-overlay-text (overlay text)
+  (if (string-match ipa-annotation-id-regexp text)
+      (setq text (match-string 2 text)))
+  (save-excursion
+    (beginning-of-line)
+    (overlay-put overlay 'before-string
+                 (if (equal text "")
+                     ""
+                   (propertize (concat "[" text "]\n") 'face ipa-annotation-face)))))
+(defun ipa-create-overlay (pos text)
+  (save-excursion
+    (goto-char pos)
+    (setq pos (point-at-bol))
+    (let ((overlay (make-overlay pos pos nil t nil)))
+     (ipa-set-overlay-text overlay text)
+     (push (cons overlay text) ipa-annotations-in-buffer)
+     (ipa-sort-overlays))))

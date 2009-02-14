@@ -27,3 +27,6 @@
 ;; No tabs, spaces
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+
+;; Add-ons path
+(add-to-list 'load-path (concat elisp-root "/add-ons/"))
