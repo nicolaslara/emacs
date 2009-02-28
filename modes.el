@@ -15,6 +15,9 @@
 ;; Loads js2-mode
 (autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+;; nxml-mode
+(load (concat elisp-root "/modes/nxml/rng-auto.el"))
     
 ;; loads ruby-mode
 (setq load-path (cons (concat elisp-root "/modes/ruby/") load-path))
