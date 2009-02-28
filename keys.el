@@ -2,6 +2,7 @@
 (global-set-key [f10] 'scroll-bar-mode)
 (global-set-key [f9] 'cross)
 (global-set-key [f8] 'make-frame-on-display)
+(global-set-key [f7] 'publish-buffer)
 (global-set-key [f5] 'goto-line)
 (global-set-key [delete] 'delete-char)
 (global-set-key [backspace] 'delete-backward-char)

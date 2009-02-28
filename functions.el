@@ -101,3 +101,17 @@
   (delete-other-windows)                                      ; And then unsplit the current window...
   (delete-other-frames))                                      ; ...and remove other frames, too.
 
+(defun publish-buffer-to (file)
+  "Converts buffer to html and writes it to file"
+  (interactive "Ffile: ")
+  (require 'htmlize)
+  (save-excursion
+    (with-current-buffer (htmlize-buffer (current-buffer))
+      (write-file file)
+      (kill-buffer (current-buffer))))
+  (message (concat "current buffer contents published to " file)))
+
+(defun publish-buffer ()
+  "Converts buffer to html and writes it to ~/public_html/emacs.html"
+  (interactive)
+  (publish-buffer-to "~/public_html/emacs.html"))

@@ -24,6 +24,13 @@
    kept-old-versions 2
    version-control t)       ; use versioned backups
 
+(defun make-backup-file-name (FILE)
+  (let ((dirname (concat "~/.emacs_backups"
+                         (format-time-string "%y/%m/%d/"))))
+    (if (not (file-exists-p dirname))
+        (make-directory dirname t))
+    (concat dirname (file-name-nondirectory FILE))))
+
 ;; No tabs, spaces
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
