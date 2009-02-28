@@ -61,3 +61,5 @@
      (ipa-set-overlay-text overlay text)
      (push (cons overlay text) ipa-annotations-in-buffer)
      (ipa-sort-overlays))))
+
+(require 'htmlize)
