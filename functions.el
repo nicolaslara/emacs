@@ -116,7 +116,7 @@
   (interactive)
   (publish-buffer-to "~/public_html/emacs.html"))
 
-(defun htmlize-code-snnipet (beg end)
+(defun htmlize-code-snippet (beg end)
   "Htmlize region and put into <pre> tag style that is left in <body> tag
 plus add font-size: 8pt"
   (interactive "r")
