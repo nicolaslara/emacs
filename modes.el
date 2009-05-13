@@ -52,3 +52,7 @@
 (add-to-list 'auto-mode-alist '("\\.php[34]?\\'" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.[sj]?html?\\'" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . html-mode))
+
+;; GaCeLa mode
+(autoload 'gcl-mode "gcl-mode")
+(setq auto-mode-alist (append '(("\\.gcl\\'" . gcl-mode)) auto-mode-alist))

@@ -137,3 +137,8 @@ plus add font-size: 8pt"
     (while (re-search-forward "<pre>" nil t)
       (replace-match pre-tag nil nil))
     (goto-char (point-min))))
+
+(defun get-ip-address (dev)
+  "get the IP-address for device DEV (default: eth0)"
+  (interactive "sDevice: ")
+  (message (format-network-address (car (network-interface-info dev)) t)))

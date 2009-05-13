@@ -4,6 +4,7 @@
 (global-set-key [f8] 'make-frame-on-display)
 (global-set-key [f7] 'publish-buffer)
 (global-set-key [f5] 'goto-line)
+;(get-ip-address "wlan0")
 (global-set-key [delete] 'delete-char)
 (global-set-key [backspace] 'delete-backward-char)
 (global-set-key (kbd "M-<up>") 'move-line-up)
