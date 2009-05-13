@@ -142,3 +142,4 @@ plus add font-size: 8pt"
   "get the IP-address for device DEV (default: eth0)"
   (interactive "sDevice: ")
   (message (format-network-address (car (network-interface-info dev)) t)))
+

@@ -56,3 +56,7 @@
 ;; GaCeLa mode
 (autoload 'gcl-mode "gcl-mode")
 (setq auto-mode-alist (append '(("\\.gcl\\'" . gcl-mode)) auto-mode-alist))
+
+;; Django html-mode
+(autoload 'django-html-mode "django-html-mode")
+(add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . django-html-mode))

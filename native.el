@@ -42,3 +42,7 @@
 (require 'dired-x)
 (require 'wdired)
 (require 'tramp)
+
+;; Make repeated buffer names more verbose
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
