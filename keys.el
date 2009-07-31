@@ -3,6 +3,7 @@
 (global-set-key [f9] 'cross)
 (global-set-key [f8] 'make-frame-on-display)
 (global-set-key [f7] 'publish-buffer)
+(global-set-key [f6] 'set-frame-name)
 (global-set-key [f5] 'goto-line)
 ;(get-ip-address "wlan0")
 (global-set-key [delete] 'delete-char)

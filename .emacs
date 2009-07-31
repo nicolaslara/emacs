@@ -15,4 +15,5 @@
 (load-library "modes")
 (load-library "tools")
 (load-library "keys")
+(load-library "myfont")
 
