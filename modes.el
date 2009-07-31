@@ -60,3 +60,17 @@
 ;; Django html-mode
 (autoload 'django-html-mode "django-html-mode")
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . django-html-mode))
+
+;; Cheetah mode
+(define-derived-mode cheetah-mode html-mode "Cheetah"
+  (make-face 'cheetah-variable-face)
+  (font-lock-add-keywords
+   nil
+   '(
+     ("\(#\(from\|else\|try\|pass\|silent\|except\|include\|set\|import\|for\|if\|end\)+\)\>" 1 font-lock-type-face)
+     ("\(#\(from\|for\|end\)\).*\<\(for\|import\|if\|try\|in\)\>" 3 font-lock-type-face)
+     ("\(\$\(?:\sw\|}\|{\|\s_\)+\)" 1 font-lock-variable-name-face))
+   )
+  (font-lock-mode 1)
+  )
+(setq auto-mode-alist (cons '( "\.tmpl'" . cheetah-mode ) auto-mode-alist ))
