@@ -46,3 +46,9 @@
 ;; Make repeated buffer names more verbose
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
+
+;; Disable icomplete-mode
+(icomplete-mode 0)
+
+;; Keep each line on its own
+(toggle-truncate-lines 1)
