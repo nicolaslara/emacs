@@ -63,3 +63,7 @@
      (ipa-sort-overlays))))
 
 (require 'htmlize)
+
+;; Org-mode
+(add-to-list 'load-path (concat elisp-root "/tools/git-emacs"))
+(require 'org-install)
