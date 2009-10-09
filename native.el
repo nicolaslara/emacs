@@ -51,4 +51,4 @@
 (icomplete-mode 0)
 
 ;; Keep each line on its own
-(toggle-truncate-lines 1)
+(setq truncate-lines 1)
