@@ -67,3 +67,7 @@
 ;; Org-mode
 (add-to-list 'load-path (concat elisp-root "/tools/git-emacs"))
 (require 'org-install)
+
+;; mark-stack
+(add-to-list 'load-path (concat elisp-root "/tools/"))
+(require 'marks)

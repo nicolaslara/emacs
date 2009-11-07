@@ -23,3 +23,8 @@
 ;; Better middle mouse button interaction
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
+;;mark-stack
+(global-set-key (kbd "C-x <next>") 'local-push-mark)
+(global-set-key (kbd "C-x <prior>") 'local-pop-mark)
+(global-set-key (kbd "C-x S-<prior>") 'global-pop-mark)

@@ -149,3 +149,5 @@ plus add font-size: 8pt"
   (let ((b (if mark-active begin (point-min)))
       (e (if mark-active end (point-max))))
     (message "Word count: %s" (how-many "\\w+" b e))))
+
+
