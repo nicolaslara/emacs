@@ -71,3 +71,17 @@
 ;; mark-stack
 (add-to-list 'load-path (concat elisp-root "/tools/"))
 (require 'marks)
+
+;; dpaste
+(require 'dpaste nil)
+(global-set-key (kbd "C-c p") 'dpaste-region-or-buffer)
+(setq dpaste-poster "Nicolas Lara")
+
+;; slime
+(setq inferior-lisp-program "/usr/bin/sbcl")
+(add-to-list 'load-path (concat elisp-root "/tools/slime/"))
+(require 'slime)
+(add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
+(add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
+(setq inferior-lisp-program "sbcl")
+(slime-setup '(slime-fancy slime-asdf))
