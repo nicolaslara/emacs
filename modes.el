@@ -74,3 +74,11 @@
   (font-lock-mode 1)
   )
 (setq auto-mode-alist (cons '( "\.tmpl'" . cheetah-mode ) auto-mode-alist ))
+
+;; Clojure mode
+(add-to-list 'load-path (concat elisp-root "/modes/clojure-mode//"))
+(require 'clojure-mode)
+
+;; Javascript mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+(autoload 'javascript-mode "javascript" nil t)
