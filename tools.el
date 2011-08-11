@@ -85,3 +85,17 @@
 (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
 (setq inferior-lisp-program "sbcl")
 (slime-setup '(slime-fancy slime-asdf))
+
+;; Python
+(add-to-list 'load-path (concat elisp-root "/tools/emacs-for-python/"))
+(require 'epy-setup)
+(require 'epy-python)
+(require 'epy-completion)
+(require 'epy-editing)
+(global-linum-mode 0)
+(global-hl-line-mode 0)
+(ido-mode 0)
+(require 'epy-bindings)
+(epy-django-snippets)
+(epy-setup-checker "pyflakes %f")
+(setq skeleton-pair 'nil)

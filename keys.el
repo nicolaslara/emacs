@@ -8,9 +8,9 @@
 ;(get-ip-address "wlan0")
 (global-set-key [delete] 'delete-char)
 (global-set-key [backspace] 'delete-backward-char)
-(global-set-key (kbd "M-<up>") 'move-line-up)
-(global-set-key (kbd "M-<down>") 'move-line-down)
-(global-set-key (kbd "C-x p") 'goto-matching-paren)
+;(global-set-key (kbd "M-<up>") 'move-line-up)
+;(global-set-key (kbd "M-<down>") 'move-line-down)
+(global-set-key (kbd "C-x )") 'goto-matching-paren)
 (global-set-key (kbd "M-C-f") 'find-file-at-point)
 
 ;; disable insert key
