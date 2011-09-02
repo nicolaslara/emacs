@@ -6,3 +6,4 @@
 
 ;(tool-bar-mode 0)
 (set-frame-font "-misc-fixed-medium-r-normal--14-*-75-75-c-70-koi8-r")
+(setq default-frame-alist '((font . "-misc-fixed-medium-r-normal--14-*-75-75-c-70-koi8-r")))
