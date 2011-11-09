@@ -52,3 +52,8 @@
 
 ;; Keep each line on its own
 (setq truncate-lines 1)
+
+;; indent to 4 spaces
+(setq indent-tabs-mode t
+      tab-width 4
+      python-indent 4)
